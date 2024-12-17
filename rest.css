@@ -1,0 +1,309 @@
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #202D36;
+        color: white;
+    }
+}
+
+
+/* Force dark mode manually */
+
+body.dark-mode {
+    background-color: #202D36;
+    color: white !important;
+}
+
+
+/* Force light mode manually */
+
+body.light-mode {
+    background-color: white;
+    color: black !important;
+}
+
+
+/* General Styles Light Mode Default */
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    box-sizing: content-box;
+    background-color: white;
+    color: black !important;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #202D36;
+    color: white !important;
+}
+
+
+/* Header */
+
+header.header-where {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 2px #f0f0f0;
+}
+
+.bg-color {
+    background-color: #2B3743;
+    box-shadow: none !important;
+}
+
+header.header-where h2 {
+    margin-left: 1.5em;
+}
+
+header button.header-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    margin-right: 2em;
+    border: none;
+    background-color: transparent;
+    /* color: #000; */
+}
+
+.dark-mode-color {
+    color: #fff;
+}
+
+
+/* main styles */
+
+
+/* search input section */
+
+form.search-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+}
+
+form.search-filter .search-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 25px;
+    /* right: 30px; */
+}
+
+.search-input input {
+    width: 30em;
+    height: 50px;
+    padding-left: 3.5em;
+    background-color: transparent;
+    box-shadow: 0 4px 2px #f0f0f0;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-background {
+    background-color: #2B3743 !important;
+    box-shadow: none !important;
+    color: #fff;
+}
+
+.search-input input::placeholder {
+    padding-left: 3.5em;
+}
+
+
+/* filter by region */
+
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 1em;
+    margin-right: 2.5em;
+    border: none;
+    box-shadow: 0 4px 2px #f0f0f0;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.select-background,.backBtnChange {
+    background-color: #2B3743 !important;
+    color: #fff;
+    box-shadow: none !important;
+}
+
+option.option {
+    background-color: transparent;
+    color: #000;
+}
+
+.option-style {
+    background-color: #202D36;
+    color: #fff !important;
+}
+
+
+/* Flag Section */
+
+.countryDetails {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* width: 300px; */
+    padding: 10px;
+    background-color: transparent;
+    gap: 20px;
+}
+
+.flagComponent {
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.flagComponent.dark {
+    color: #fff;
+}
+
+.flagComponent-color {
+    background-color: #2B3743;
+}
+
+.flagComponent img {
+    width: 250px;
+}
+
+.population {
+    margin: 20px;
+}
+
+.population-region {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+/* New Detail Page */
+
+.flagDetailContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 6em;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 4em 1.5em 3em;
+}
+
+.backBtn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    border: none;
+    width: 100px;
+    padding: 10px;
+    box-shadow: inherit;
+    background-color: transparent;
+    color: inherit;
+}
+.backBtnChange{
+box-shadow: none;
+background-color: #2B3743;
+}
+.countryFlag-name, .countryFlag-result {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10em;
+}
+.countryFlag-result{
+    gap: 10em !important;
+}
+.countryFlag img{
+    width: 500px;
+}
+.countryItemsCon {
+    display: flex;
+    gap: 20px;
+}
+
+.countryBorder {
+    display: flex;
+    gap: 10px;
+}
+
+.countryBorder button {
+    height: 30px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    box-shadow: inherit;
+    color: inherit;
+}
+
+
+/* Media Query */
+
+@media screen and (max-width:768px) {
+    .search-input input {
+        width: 100%;
+    }
+    form.search-filter {
+        /* width: 100%; */
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .countryDetails {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        margin: auto;
+        background-color: transparent;
+        gap: 20px;
+    }
+    header.header-where {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 2px #f0f0f0;
+    }
+    .countryFlag-name{
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .countryFlag{
+        margin: auto;
+        gap: 0;
+        flex-wrap: wrap;
+    }
+    .countryFlag img{
+        margin: auto;
+width:  350px;
+    }
+    .countryItemsCon{
+     flex-wrap: wrap;
+    }
+}

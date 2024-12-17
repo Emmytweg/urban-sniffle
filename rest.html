@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="rest.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+   <header class="header-where">
+    <h2>
+        Where in the world?
+    </h2>
+    <button type="button" id="header-btn"  class="header-btn" > <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>Dark Mode</button>
+   </header> 
+<main id="mainCon">
+    <!-- search and filter -->
+  <form class="search-filter">
+    <label class="search-input">
+    <svg class="searchIcon" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+    <input type="search" id="searchBar" placeholder="Search for a country...">
+
+</label>
+<div class="custom-select">
+    <select name="filter By Region" id="filterByRegion" >
+
+        <option class="option" value="0">Filter by Region</option>
+        <option class="option"value="1">Africa</option>
+        <option class="option"value="2">Americas</option>
+        <option class="option"value="3">Asia</option>
+        <option class="option"value="4">Europe</option>
+        <option class="option"value="5">Oceania</option>
+    </select> 
+</div> 
+</form>  
+
+<!-- Country Details -->
+<section id="countryDetails" class="countryDetails">
+</section>
+</main>
+
+<!-- Show Country -->
+ <section id="showCountry">
+
+ </section>
+<section id="searched-country"> </section>
+
+   <script src="rest.js"></script>
+</body>
+</html>
